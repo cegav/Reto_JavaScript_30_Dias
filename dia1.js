@@ -40,6 +40,8 @@ let saluda = function(nombre) {
 
 saluda('Cesar');
 
+//Array FUNCTION
+
 let saludito = (nombre) => { console.log(`Holita para ${nombre}`); }
 
 saludito('Pepito');
