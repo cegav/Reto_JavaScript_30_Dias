@@ -186,14 +186,56 @@ do{
 
 
 
-let size = 5;
-let caracter = "$";
+//Triangulo
 
-for(let i = 1; i<=size; i++) {
-  console.log("$");
+
+let caracteres = [];
+let triangulo;
+
+for (let i = 0; i < size; i++) {
+  caracteres[i] = caracter;
+  //caracteres.push(caracter);
+  //console.log(caracteres);
 }
 
-for(i = 1; i<= size; i++) {
-  caracter = caracter + caracter
-  console.log(`${caracter}`);
+for (let i = size - 1; i >= 0; i--) {
+  let resultado = "";
+  for (let j = i; j < size; j++) {
+    resultado += caracteres[j];
+  }
+  //triangulo = resultado.join(''); 
+  console.log(resultado);
+}
+
+let altura = 5;
+let patron = "*";
+
+for (let i = altura; i >= 1; i--) {
+  let fila = "";
+  for (let j = 1; j <= i; j++) {
+    fila += patron;
+  }
+  console.log(fila);
+}
+
+let size = 6;
+let caracter = "$"
+
+function printTriangle(size, character) {
+  let triangle = "";
+  let characterNumber = 1;
+  while(characterNumber <= size){
+      for (let j = 0; j < size - characterNumber; j++) {
+        triangle += " ";
+      }
+      for (let j = 0; j < characterNumber; j++) {
+        triangle += character;
+      }
+    if (characterNumber < size) { triangle += `\n` };
+    characterNumber++;
+    }
+
+    let imprimir = console.log(triangle);
+  
+  return imprimir;
 }
